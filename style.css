@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+.init-screen {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.init-screen video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .25;
+}
+
+.init-screen .intro {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 30pt;
+    color: #FFF;
+    text-align: center;
+}
+
+.init-screen .intro .photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto auto 25px auto;
+    background-image: url("me.png");
+    background-size: cover;
+    border: 2px solid #FFF;
+}
