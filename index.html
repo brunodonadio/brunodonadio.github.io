@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bruno Donadío</title>
+    <title>Bruno Donadío's Resume</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,10 +14,32 @@
         </video>
         <div class="intro">
             <div class="photo"></div>
-            Hi! I'm <strong>Bruno Donadío</strong>. I'm a Software Developer.<br>
-            Passionate on <strong>building ideas</strong>.<br>
-            Fanatical about <strong>improving myself</strong>.
+            <div class="short-bio">
+                Hi! I'm <strong>Bruno Donadío</strong>. I'm a Software Developer.<br>
+                Passionate on <strong>building ideas</strong>.<br>
+                Fanatical about <strong>improving myself</strong>.
+            </div>
+            <a data-scroll href="#about-me">
+                <div class="about-me">
+                    ABOUT ME<br>
+                    <div class="down-arrow"></div>
+                </div>
+            </a>
         </div>
     </div>
+    <!--<div class="init-screen-filling"></div>-->
+    <!--<div id="about-me" class="bio">-->
+        <!--<p class="title">-->
+            <!--A little about me-->
+        <!--</p>-->
+        <!--<p class="description">-->
+            <!--I was born in <strong>San Isidro, Provincia de Buenos Aires, Argentina</strong> on <strong>November 6, 1996</strong>. When I was 8 years old, I've moved to <strong>Santa Fe, Provincia de Santa Fe, Argentina</strong>, where I currently live.-->
+            <!--Since then, I've always been an enthusiast about how things work.-->
+        <!--</p>-->
+    <!--</div>-->
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+        new SmoothScroll('a[href*="#"]');
+    </script>
 </body>
 </html>

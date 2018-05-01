@@ -30,19 +30,70 @@ body {
     vertical-align: middle;
     position: relative;
     width: 100%;
-    font-family: 'Roboto Thin', sans-serif;
-    font-size: 30pt;
-    color: #FFF;
-    text-align: center;
 }
 
 .init-screen .intro .photo {
-    width: 300px;
-    height: 300px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     position: relative;
     margin: auto auto 25px auto;
     background-image: url("me.png");
     background-size: cover;
     border: 2px solid #FFF;
+}
+
+.init-screen .short-bio {
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 2vw;
+    color: #FFF;
+    text-align: center;
+}
+
+.init-screen .about-me {
+    width: 5vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: .7vw;
+    color: #FFF;
+    text-align: center;
+    opacity: .5;
+}
+
+.init-screen .about-me .down-arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.init-screen .about-me:hover {
+    opacity: 1;
+}
+
+.init-screen-filling {
+    margin-top: 50%;
+}
+
+.bio {
+    width: 60vw;
+    height: 1000px;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.bio p.title {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 2.5vw;
+}
+
+.bio p.description {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1vw;
 }
