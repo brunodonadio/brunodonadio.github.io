@@ -91,9 +91,11 @@ body {
 .bio p.title {
     font-family: 'Roboto Black', sans-serif;
     font-size: 2.5vw;
+    line-height: 3vw;
 }
 
 .bio p.description {
     font-family: 'Roboto Light', sans-serif;
     font-size: 1vw;
+    line-height: 1.5vw;
 }
