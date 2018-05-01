@@ -37,10 +37,10 @@ body {
     height: 15vw;
     border-radius: 50%;
     position: relative;
-    margin: auto auto 25px auto;
+    margin: auto auto 3vh auto;
     background-image: url("me.png");
     background-size: cover;
-    border: 2px solid #FFF;
+    border: .1vw solid #FFF;
 }
 
 .init-screen .short-bio {
@@ -55,7 +55,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 1.5vh;
     margin: auto;
     font-family: 'Roboto Thin', sans-serif;
     font-size: .7vw;
@@ -66,9 +66,9 @@ body {
 
 .init-screen .about-me .down-arrow {
     border: solid white;
-    border-width: 0 2px 2px 0;
+    border-width: 0 .1vw .1vw 0;
     display: inline-block;
-    padding: 3px;
+    padding: .15vw;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
