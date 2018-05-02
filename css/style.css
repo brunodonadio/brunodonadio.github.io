@@ -38,7 +38,7 @@ body {
     border-radius: 50%;
     position: relative;
     margin: auto auto 30px auto;
-    background-image: url("me.png");
+    background-image: url("../img/me.png");
     background-size: cover;
     border: 2px solid #FFF;
 }
@@ -80,6 +80,26 @@ body {
 
 .init-screen-filling {
     margin-top: 100vh;
+}
+
+.init-screen .linkedin-profile {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    opacity: .75;
+}
+
+.init-screen .linkedin-profile img {
+    top: 2px;
+    right: 2px;
+    position: relative;
+}
+
+.init-screen .linkedin-profile:hover {
+    opacity: 1;
 }
 
 .bio {
