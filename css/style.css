@@ -82,6 +82,26 @@ body {
     margin-top: 100vh;
 }
 
+.init-screen .switch-language {
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    opacity: .75;
+}
+
+.init-screen .switch-language img {
+    top: 2px;
+    right: 2px;
+    position: relative;
+}
+
+.init-screen .switch-language:hover {
+    opacity: 1;
+}
+
 .init-screen .linkedin-profile {
     top: 15px;
     right: 15px;
