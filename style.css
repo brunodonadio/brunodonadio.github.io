@@ -279,3 +279,51 @@ body {
     line-height: 20px;
     float: right;
 }
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.footer video {
+    position:relative;
+    z-index: 0;
+    width: 100%;
+    transform: translate(0%, -100px);
+    opacity: .15;
+}
+
+.footer .contact-me {
+    position: absolute;
+    top: 0;
+    left: 30vw;
+    z-index: 1;
+    width: 40vw;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.footer .contact-me .future-together {
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 54px;
+    line-height: 62px;
+    color: #FFFFFF;
+    border: dotted 5px #FFFFFF;
+}
+
+.footer .contact-me span {
+    font-family: 'Reoboto Regular', sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.md-48 {
+    position: relative;
+    top: 4px;
+}
