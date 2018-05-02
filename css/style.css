@@ -313,7 +313,7 @@ body {
     z-index: 0;
     width: 100%;
     transform: translate(0%, -100px);
-    opacity: .15;
+    opacity: .25;
 }
 
 .footer .contact-me {
