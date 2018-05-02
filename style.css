@@ -160,10 +160,16 @@ body {
     line-height: 46px;
 }
 
-.work-experience span.description {
-    font-family: 'Roboto Light', sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+.formal-learning {
+    width: 60vw;
+    margin: auto;
+    padding: 35px 0 35px 0;
+}
+
+.formal-learning span.title {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 38px;
+    line-height: 46px;
 }
 
 .timeline {
