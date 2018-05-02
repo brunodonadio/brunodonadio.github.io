@@ -82,6 +82,26 @@ body {
     margin-top: 100vh;
 }
 
+.init-screen .switch-language {
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    opacity: .75;
+}
+
+.init-screen .switch-language img {
+    top: 2px;
+    right: 2px;
+    position: relative;
+}
+
+.init-screen .switch-language:hover {
+    opacity: 1;
+}
+
 .init-screen .linkedin-profile {
     top: 15px;
     right: 15px;
@@ -313,22 +333,22 @@ body {
     z-index: 0;
     width: 100%;
     transform: translate(0%, -100px);
-    opacity: .15;
+    opacity: .25;
 }
 
 .footer .contact-me {
     position: absolute;
     top: 0;
-    left: 30vw;
+    left: 20vw;
     z-index: 1;
-    width: 40vw;
+    width: 60vw;
     padding-top: 150px;
     text-align: center;
 }
 
 .footer .contact-me .future-together {
-    width: 100%;
-    margin-bottom: 50px;
+    width: 40vw;
+    margin: 0 auto 50px auto;
     font-family: 'Roboto Regular', sans-serif;
     font-size: 54px;
     line-height: 62px;
