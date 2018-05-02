@@ -85,7 +85,7 @@ body {
 .bio {
     width: 60vw;
     margin: auto;
-    padding: 25px 0 25px 0;
+    padding: 35px 0 35px 0;
 }
 
 .bio span.title {
@@ -103,7 +103,7 @@ body {
 .skills {
     width: 60vw;
     margin: auto;
-    padding: 25px 0 25px 0;
+    padding: 35px 0 35px 0;
 }
 
 .skills span.title {
@@ -146,4 +146,130 @@ body {
     width: 100%;
     height: 25px;
     clear: both;
+}
+
+.work-experience {
+    width: 60vw;
+    margin: auto;
+    padding: 35px 0 35px 0;
+}
+
+.work-experience span.title {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+.work-experience span.description {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #EEE;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -14px;
+    background-color: #EEE;
+    border: 2px solid #DDD;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline .left {
+    left: 0;
+}
+
+.timeline .right {
+    left: 50%;
+}
+
+.timeline .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #EEE;
+}
+
+.timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #EEE transparent transparent;
+}
+
+.timeline .right::after {
+    left: -16px;
+}
+
+.timeline .container .content {
+    padding: 30px 30px;
+    background-color: #EEE;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline .container .content span.job {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.timeline .container .content span.commpany {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.timeline .container .content span.description {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.timeline .container .content span.period {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    float: right;
 }
