@@ -128,13 +128,13 @@ CV PAGE
 - Minimal page
 - Button:
   "Download CV (PDF)"
-  linking to /assets/Bruno-Donadio-CV.pdf
+  linking to /assets/Bruno-Donadio-Resume.pdf
 - Text link to LinkedIn
 - Short note:
   "Detailed case studies are available on this website."
 
 ASSETS
-- Create public/assets/Bruno-Donadio-CV.pdf (placeholder file)
+- Create public/assets/Bruno-Donadio-Resume.pdf (placeholder file)
 - Favicon placeholder
 - Basic SEO meta tags (title, description, og tags)
 

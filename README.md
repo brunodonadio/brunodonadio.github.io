@@ -35,4 +35,4 @@ Output is in `dist/`.
    - `site: 'https://brunodonadio.github.io'`
    - `base: '/repo-name'`
 
-Replace `public/assets/Bruno-Donadio-CV.pdf` with your actual CV PDF.
+Replace `public/assets/Bruno-Donadio-Resume.pdf` with your actual CV PDF.
