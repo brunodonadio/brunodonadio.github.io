@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
+import { caseStudies } from '../../data/caseStudies';
+---
+<Layout title="Case Studies — Bruno Donadío" description="Selected case studies: internal platforms, game server hosting, quality at scale.">
+  <article>
+    <header class="mb-12">
+      <h1 class="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">
+        Case Studies
+      </h1>
+      <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+        A selection of projects I’ve worked on—internal platforms, hosting, and quality at scale.
+      </p>
+    </header>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {caseStudies.map((cs) => (
+        <CaseStudyCard slug={cs.slug} title={cs.title} subtitle={cs.subtitle} timeframe={cs.timeframe} tags={cs.tags} />
+      ))}
+    </div>
+  </article>
+</Layout>

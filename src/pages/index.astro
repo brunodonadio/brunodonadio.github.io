@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import { caseStudies } from '../data/caseStudies';
+
+const featured = caseStudies.slice(0, 3);
+
+const strengths = [
+  { title: 'Backend Engineering', desc: 'APIs, services, and data models that scale.' },
+  { title: 'System Design', desc: 'Distributed systems, boundaries, and clear contracts.' },
+  { title: 'Integrations', desc: 'Third-party systems, webhooks, and unified APIs.' },
+  { title: 'Reliability', desc: 'Observability, resilience, and operational clarity.' },
+  { title: 'Delivery & Ownership', desc: 'End-to-end ownership from design to production.' },
+  { title: 'CI/CD & Environments', desc: 'Pipelines, environments, and release confidence.' },
+];
+---
+<Layout title="Bruno Donadío — Senior Backend Engineer" description="Senior Backend Engineer. Platform-minded systems, reliability, integrations, and delivery ownership.">
+  <article class="space-y-24 sm:space-y-32">
+    <!-- Hero -->
+    <section class="pt-4">
+      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl md:text-6xl">
+        Senior Backend Engineer
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400">
+        I build and operate backend systems and platforms that teams rely on—APIs, integrations, reliability, and clear ownership from design to production.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="/assets/Bruno-Donadio-CV.pdf"
+          download
+          class="inline-flex items-center rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-950"
+        >
+          Download CV
+        </a>
+        <a
+          href="/case-studies"
+          class="inline-flex items-center rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-700 transition hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:ring-neutral-600 dark:focus:ring-offset-neutral-950"
+        >
+          View Case Studies
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section>
+      <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 sm:text-3xl">About</h2>
+      <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+        I focus on backend engineering and platform work: designing systems that other teams and products build on, keeping them reliable, and shipping with clear ownership.
+      </p>
+      <ul class="mt-6 list-disc space-y-2 pl-5 text-neutral-600 dark:text-neutral-400">
+        <li>Backend services and APIs that scale and stay maintainable</li>
+        <li>Platform-minded systems with clear boundaries and contracts</li>
+        <li>Reliability: observability, failure modes, and operational runbooks</li>
+        <li>Integrations with third-party systems and internal tooling</li>
+        <li>End-to-end delivery ownership from design to production</li>
+      </ul>
+    </section>
+
+    <!-- Core Strengths -->
+    <section>
+      <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 sm:text-3xl">Core Strengths</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {strengths.map((s) => (
+          <div
+            class="rounded-xl border border-neutral-200 bg-white p-6 transition hover:border-neutral-300 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-neutral-700"
+          >
+            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">{s.title}</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section>
+      <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 sm:text-3xl">Featured Case Studies</h2>
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        A selection of projects I’ve led or contributed to.
+      </p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {featured.map((cs) => (
+          <CaseStudyCard slug={cs.slug} title={cs.title} subtitle={cs.subtitle} timeframe={cs.timeframe} tags={cs.tags} />
+        ))}
+      </div>
+      <p class="mt-6">
+        <a href="/case-studies" class="font-medium text-neutral-700 underline decoration-neutral-400 underline-offset-4 transition hover:decoration-neutral-600 dark:text-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-400">
+          View all case studies →
+        </a>
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 sm:text-3xl">Contact</h2>
+      <p class="mt-4 max-w-xl text-neutral-600 dark:text-neutral-400">
+        If you’d like to discuss backend or platform work, reach out.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-6">
+        <a
+          href="mailto:bruno.donadio@icloud.com"
+          class="font-medium text-neutral-700 underline decoration-neutral-400 underline-offset-4 transition hover:decoration-neutral-600 dark:text-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-400"
+        >
+          bruno.donadio@icloud.com
+        </a>
+        <a
+          href="https://linkedin.com/in/brunodonadio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-neutral-700 underline decoration-neutral-400 underline-offset-4 transition hover:decoration-neutral-600 dark:text-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-400"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </article>
+</Layout>
