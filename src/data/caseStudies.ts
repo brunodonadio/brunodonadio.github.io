@@ -22,7 +22,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'internal-operations-platform',
     title: 'Internal Operations Platform',
-    subtitle: 'Unifying business systems and workflows',
+    subtitle: 'Replaced spreadsheet workflows with auditable internal systems.',
     timeframe: '2022 – 2023',
     role: 'Senior Backend Engineer',
     tags: ['Backend', 'Platform', 'Internal Tools'],
@@ -74,7 +74,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'game-server-hosting-platform',
     title: 'Game Server Hosting Platform',
-    subtitle: 'Hosting, control panel, and automation',
+    subtitle: 'Built a hosting platform with automation and a custom control panel.',
     timeframe: '2021 – 2022',
     role: 'Senior Backend Engineer',
     tags: ['Platform', 'DevOps', 'Automation'],
@@ -126,7 +126,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'quality-at-scale',
     title: 'Quality at Scale',
-    subtitle: 'Large product teams, automation, and release confidence',
+    subtitle: 'Improved release confidence across large product teams.',
     timeframe: '2020 – 2021',
     role: 'Senior Backend Engineer',
     tags: ['CI/CD', 'Quality', 'Automation'],

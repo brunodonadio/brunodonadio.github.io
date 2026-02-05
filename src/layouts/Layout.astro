@@ -40,7 +40,7 @@ const linkedInUrl = 'https://linkedin.com/in/brunodonadio';
         <div class="flex items-center gap-1 sm:gap-4">
           <a
             href="/cv"
-            class="rounded-lg px-3 py-2 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:focus:ring-neutral-600"
+            class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:focus-visible:ring-neutral-500 dark:focus-visible:ring-offset-neutral-950"
           >
             CV
           </a>
@@ -63,14 +63,15 @@ const linkedInUrl = 'https://linkedin.com/in/brunodonadio';
       </nav>
     </header>
 
-    <main class="mx-auto max-w-4xl px-6 py-10 sm:py-16">
+    <main class="mx-auto max-w-4xl px-6 py-8 sm:py-12">
       <slot />
     </main>
 
     <footer class="border-t border-neutral-200 dark:border-neutral-800">
-      <div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
+      <div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row sm:py-8">
         <span class="text-sm text-neutral-500 dark:text-neutral-400">Bruno Donadío © {new Date().getFullYear()}</span>
-        <div class="flex gap-6">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a href="mailto:bruno.donadio@icloud.com" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">bruno.donadio@icloud.com</a>
           <a href="/cv" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">CV</a>
           <a href="/case-studies" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">Case Studies</a>
           <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">LinkedIn</a>
