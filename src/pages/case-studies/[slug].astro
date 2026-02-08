@@ -13,7 +13,10 @@ if (!caseStudy) {
   return Astro.redirect('/404');
 }
 ---
-<Layout title={`${caseStudy.title} — Bruno Donadío`} description={caseStudy.subtitle}>
+<Layout
+  title={`${caseStudy.title} — Bruno Donadío`}
+  description={caseStudy.metaDescription ?? caseStudy.subtitle}
+>
   <article>
     <p class="mb-8">
       <a
@@ -49,7 +52,17 @@ if (!caseStudy) {
       {caseStudy.sections.map((section) => (
         <section class="mb-10">
           <h2 class="text-xl font-semibold text-neutral-900 dark:text-neutral-100">{section.heading}</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-400">{section.content}</p>
+          {section.nodes.map((node) =>
+            node.type === 'p' ? (
+              <p class="mt-3 text-neutral-600 dark:text-neutral-400">{node.text}</p>
+            ) : (
+              <ul class="mt-3 list-disc space-y-1 pl-5 text-neutral-600 dark:text-neutral-400">
+                {node.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )
+          )}
         </section>
       ))}
     </div>

@@ -1,12 +1,17 @@
+export type SectionNode =
+  | { type: 'p'; text: string }
+  | { type: 'ul'; items: string[] };
+
 export interface CaseStudySection {
   heading: string;
-  content: string;
+  nodes: SectionNode[];
 }
 
 export interface CaseStudy {
   slug: string;
   title: string;
   subtitle: string;
+  metaDescription?: string;
   timeframe: string;
   role: string;
   tags: string[];
@@ -20,54 +25,198 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: 'internal-operations-platform',
-    title: 'Internal Operations Platform',
-    subtitle: 'Replaced spreadsheet workflows with auditable internal systems.',
-    timeframe: '2022 – 2023',
-    role: 'Senior Backend Engineer',
-    tags: ['Backend', 'Platform', 'Internal Tools'],
+    slug: 'don-lucas-internal-operations-platform',
+    title: 'Internal Operations Platform — Don Lucas SRL',
+    subtitle:
+      'Built a centralized, auditable internal operations platform providing end-to-end visibility across orders, production, delivery, and accounting.',
+    metaDescription:
+      'Case study describing the design and implementation of an internal operations platform for a food manufacturing and distribution company.',
+    timeframe: '2025 – 2026',
+    role: 'Product designer, backend & frontend engineer, platform owner',
+    tags: ['Internal Platform', 'Full-stack', 'Operations'],
     problem:
-      'Internal teams relied on scattered tools and manual processes, leading to duplication, delays, and poor visibility across operations.',
+      'Don Lucas SRL relied on Excel spreadsheets and printed documents for orders, production planning, delivery, and accounting—with no centralized customer data or end-to-end order traceability.',
     solution:
-      'Designed and delivered a central operations platform with unified APIs, event-driven workflows, and a single source of truth for core business data.',
+      'Built a centralized internal platform with a unified API and web app covering authentication, orders, preparation orders, delivery orders, customers, products, checking accounts, and users—with event-driven flows and generated documents.',
     impact:
-      'Reduced manual handoffs by ~60%, improved data consistency, and enabled self-service for common operations.',
-    stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Event-driven'],
+      'Eliminated spreadsheet-based workflows, centralized data, reduced manual coordination, and established a scalable foundation for future automation.',
+    stack: [
+      'TypeScript',
+      'NestJS',
+      'Prisma',
+      'MySQL',
+      'Nuxt',
+      'TailwindCSS',
+      'Redis',
+      'Cloudflare',
+      'Nginx',
+      'PM2',
+      'Ubuntu',
+      'Meta Cloud API',
+    ],
     highlights: [
-      'API-first design for internal and future external consumers',
-      'Event sourcing for critical workflows',
-      'Structured logging and observability from day one',
+      'End-to-end product and platform ownership (design, backend, frontend, infrastructure)',
+      'API-first internal platform modeling real business workflows',
+      'Modular NestJS backend with clear domain boundaries',
+      'Relational data model reflecting operational states (orders, preparation, delivery, accounting)',
+      'Event-driven processing for long-running operational flows',
+      'Nuxt SPA consuming backend APIs with role-based access',
+      'Automated document generation (delivery notes, load control reports, receipts)',
+      'Meta Cloud API integration for WhatsApp transactional notifications',
+      'Multi-environment setup (test, UAT, production) with automated deployments',
+      'Scalable foundation for future automation and integrations',
     ],
     sections: [
       {
         heading: 'Context',
-        content:
-          'The company had grown quickly with multiple internal systems (CRM, billing, support) that did not integrate well. Operations depended on spreadsheets and ad-hoc scripts.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Don Lucas SRL is a food manufacturing and distribution company producing fresh pasta for wholesale customers. Before this project, core operations relied heavily on Excel spreadsheets and printed documents:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'Orders were manually entered in spreadsheets',
+              'Production batches were planned offline',
+              'Delivery planning and load control were handled manually',
+              'No centralized customer database existed',
+              'No reliable way to trace orders end-to-end',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'This limited visibility, introduced frequent manual errors, and made scaling operations increasingly difficult.',
+          },
+          {
+            type: 'p',
+            text: 'The company needed a system to manage the full operational lifecycle:',
+          },
+          {
+            type: 'p',
+            text: 'Orders → Production → Delivery → Accounting → Customer accounts.',
+          },
+        ],
+      },
+      {
+        heading: 'Role & Responsibilities',
+        nodes: [
+          { type: 'p', text: 'I owned the project end-to-end:' },
+          {
+            type: 'ul',
+            items: [
+              'Client discovery, proposal, and scoping',
+              'System design and architecture',
+              'Backend and frontend implementation',
+              'Infrastructure setup and deployments',
+              'Ongoing support and iteration',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'I acted as product designer, backend engineer, frontend engineer, and platform owner.',
+          },
+        ],
       },
       {
         heading: 'Constraints',
-        content:
-          'No big-bang migration: we had to integrate incrementally with existing systems, preserve audit trails, and keep latency low for user-facing features.',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'No "big bang" migration: existing workflows had to continue during transition',
+              'Incremental adoption by users with minimal disruption',
+              'Preserve auditability and historical data',
+              'Low latency for daily operational usage',
+              'Small internal team (~10–25 users)',
+            ],
+          },
+        ],
       },
       {
         heading: 'Solution',
-        content:
-          'We built a backend platform that exposed normalized domains via REST and internal events. Services owned their data and published changes; the platform orchestrated workflows and provided a single API layer for internal UIs and automation.',
+        nodes: [
+          {
+            type: 'p',
+            text: "Built a centralized internal platform that models the company's operational domains and exposes them through a unified API and web application.",
+          },
+          {
+            type: 'p',
+            text: "Core modules:",
+          },
+          {
+            type: 'ul',
+            items: [
+              'Authentication & Roles',
+              'Orders',
+              'Preparation Orders (production batches)',
+              'Delivery Orders (delivery planning & load control)',
+              'Customers',
+              'Products & Price Lists',
+              'Checking Accounts & Transactions',
+              'Users & My Account',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Key characteristics:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'API-first backend with clear domain boundaries',
+              'Relational data model reflecting real business workflows',
+              'Event-driven processing for long-running flows',
+              'Generated documents (delivery notes, load control reports, receipts)',
+              'Automated transactional notifications via WhatsApp and email',
+            ],
+          },
+        ],
       },
       {
         heading: 'Key Decisions',
-        content:
-          'Chose event-driven over request-response for long-running flows; standardized on a small set of primitives (commands, events, queries) to keep the system understandable and testable.',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Use NestJS + Prisma for a strongly-typed, maintainable backend',
+              'Relational database (MySQL) with explicit modeling of business entities',
+              'Separate operational states for orders, preparation, and delivery',
+              'Pre-design all screens, workflows, ERD, and API contracts before coding',
+              'Multi-environment setup (test, UAT, production) with automated deployments',
+              'Build frontend and backend as separate applications with a strict contract',
+            ],
+          },
+        ],
       },
       {
         heading: 'Impact',
-        content:
-          'Faster onboarding for new operations staff, fewer manual errors, and a clear path to expose selected capabilities to partners later.',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Eliminated spreadsheet-based operational workflows',
+              'Centralized customer, order, and financial data',
+              'Reduced manual coordination between factory, logistics, and administration',
+              'Enabled gradual onboarding of customers and users into a single system',
+              'Established a scalable foundation for future automation and integrations',
+            ],
+          },
+        ],
       },
       {
         heading: 'Learnings',
-        content:
-          'Investing in clear boundaries and documentation for internal platforms pays off when multiple teams start consuming them. Start with a narrow vertical slice and expand.',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Heavy upfront design drastically reduces rework during implementation',
+              'Clear domain boundaries simplify long-term evolution',
+              'Internal platforms benefit from treating APIs as products',
+              'Incremental adoption strategies are critical in non-technical organizations',
+            ],
+          },
+        ],
       },
     ],
   },
@@ -93,33 +242,57 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         heading: 'Context',
-        content:
-          'We offered dedicated and cloud game server hosting. Customers needed to spin up environments quickly, scale for launches, and manage costs without deep DevOps expertise.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'We offered dedicated and cloud game server hosting. Customers needed to spin up environments quickly, scale for launches, and manage costs without deep DevOps expertise.',
+          },
+        ],
       },
       {
         heading: 'Constraints',
-        content:
-          'Hardware and region diversity; need to support both long-lived dedicated servers and short-lived cloud fleets. Billing had to align with actual usage and existing contracts.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Hardware and region diversity; need to support both long-lived dedicated servers and short-lived cloud fleets. Billing had to align with actual usage and existing contracts.',
+          },
+        ],
       },
       {
         heading: 'Solution',
-        content:
-          'A backend platform that abstracted provisioning (Terraform + K8s operators), exposed a unified API and control panel for lifecycle actions, and fed a metering pipeline for billing. All state and audit logs were stored in our own services.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'A backend platform that abstracted provisioning (Terraform + K8s operators), exposed a unified API and control panel for lifecycle actions, and fed a metering pipeline for billing. All state and audit logs were stored in our own services.',
+          },
+        ],
       },
       {
         heading: 'Key Decisions',
-        content:
-          'Separated “control plane” (API, auth, state) from “data plane” (actual game servers) so we could evolve and scale them independently. Chose idempotent operations and clear state machine for server status.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Separated “control plane” (API, auth, state) from “data plane” (actual game servers) so we could evolve and scale them independently. Chose idempotent operations and clear state machine for server status.',
+          },
+        ],
       },
       {
         heading: 'Impact',
-        content:
-          'Faster onboarding of new studios, fewer support tickets for “how do I scale,” and a repeatable pattern for adding new regions and game engines.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Faster onboarding of new studios, fewer support tickets for “how do I scale,” and a repeatable pattern for adding new regions and game engines.',
+          },
+        ],
       },
       {
         heading: 'Learnings',
-        content:
-          'Game studios care about latency and predictability. Building a clear mental model (server states, regions, billing units) into the API and UI reduced confusion and support load.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Game studios care about latency and predictability. Building a clear mental model (server states, regions, billing units) into the API and UI reduced confusion and support load.',
+          },
+        ],
       },
     ],
   },
@@ -145,33 +318,57 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         heading: 'Context',
-        content:
-          'Multiple product teams shipped features on a common platform. Coordination was ad-hoc; some teams had strong tests and others had almost none. Release process was manual and error-prone.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Multiple product teams shipped features on a common platform. Coordination was ad-hoc; some teams had strong tests and others had almost none. Release process was manual and error-prone.',
+          },
+        ],
       },
       {
         heading: 'Constraints',
-        content:
-          'Could not force a single language or framework. Had to work with existing GitHub and deployment tooling. Needed buy-in from team leads without adding too much process.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Could not force a single language or framework. Had to work with existing GitHub and deployment tooling. Needed buy-in from team leads without adding too much process.',
+          },
+        ],
       },
       {
         heading: 'Solution',
-        content:
-          'We built a “quality platform” that provided standard CI jobs (lint, unit, integration, contract tests), required health and OpenAPI endpoints for every backend service, and a small set of release gates. Dashboards showed pipeline and deployment status per team.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'We built a “quality platform” that provided standard CI jobs (lint, unit, integration, contract tests), required health and OpenAPI endpoints for every backend service, and a small set of release gates. Dashboards showed pipeline and deployment status per team.',
+          },
+        ],
       },
       {
         heading: 'Key Decisions',
-        content:
-          'Treat quality as a platform capability, not a checklist. Automate the boring parts (running tests, publishing contracts) and make results visible. Keep gates minimal but non-negotiable.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Treat quality as a platform capability, not a checklist. Automate the boring parts (running tests, publishing contracts) and make results visible. Keep gates minimal but non-negotiable.',
+          },
+        ],
       },
       {
         heading: 'Impact',
-        content:
-          'Release frequency increased while incident rate dropped. Teams could see exactly what was blocking a release. New services were onboarded with the same standards from day one.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Release frequency increased while incident rate dropped. Teams could see exactly what was blocking a release. New services were onboarded with the same standards from day one.',
+          },
+        ],
       },
       {
         heading: 'Learnings',
-        content:
-          'Standardization works when it reduces cognitive load and removes ambiguity. Investing in contract tests and health checks paid off for both humans and automation.',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Standardization works when it reduces cognitive load and removes ambiguity. Investing in contract tests and health checks paid off for both humans and automation.',
+          },
+        ],
       },
     ],
   },
