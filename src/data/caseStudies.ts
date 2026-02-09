@@ -15,9 +15,6 @@ export interface CaseStudy {
   timeframe: string;
   role: string;
   tags: string[];
-  problem: string;
-  solution: string;
-  impact: string;
   stack: string[];
   highlights: string[];
   sections: CaseStudySection[];
@@ -34,12 +31,6 @@ export const caseStudies: CaseStudy[] = [
     timeframe: '2025 – 2026',
     role: 'Product designer, backend & frontend engineer, platform owner',
     tags: ['Internal Platform', 'Full-stack', 'Operations'],
-    problem:
-      'Don Lucas SRL relied on Excel spreadsheets and printed documents for orders, production planning, delivery, and accounting—with no centralized customer data or end-to-end order traceability.',
-    solution:
-      'Built a centralized internal platform with a unified API and web app covering authentication, orders, preparation orders, delivery orders, customers, products, checking accounts, and users—with event-driven flows and generated documents.',
-    impact:
-      'Eliminated spreadsheet-based workflows, centralized data, reduced manual coordination, and established a scalable foundation for future automation.',
     stack: [
       'TypeScript',
       'NestJS',
@@ -48,10 +39,10 @@ export const caseStudies: CaseStudy[] = [
       'Nuxt',
       'TailwindCSS',
       'Redis',
+      'Docker',
       'Cloudflare',
       'Nginx',
       'PM2',
-      'Ubuntu',
       'Meta Cloud API',
     ],
     highlights: [
@@ -221,23 +212,32 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: 'game-server-hosting-platform',
-    title: 'Game Server Hosting Platform',
-    subtitle: 'Built a hosting platform with automation and a custom control panel.',
-    timeframe: '2021 – 2022',
-    role: 'Senior Backend Engineer',
-    tags: ['Platform', 'DevOps', 'Automation'],
-    problem:
-      'Game studios needed reliable, scalable server hosting with a simple control panel and predictable billing. Existing solutions were either too rigid or required heavy custom work.',
-    solution:
-      'Built a hosting platform with automated provisioning, a REST API and web control panel for lifecycle management, and usage-based billing integration.',
-    impact:
-      'Reduced time-to-launch for new game titles, improved resource utilization, and provided a single pane of glass for ops and developers.',
-    stack: ['Go', 'Kubernetes', 'Terraform', 'PostgreSQL', 'Redis'],
+    slug: 'gamingsonico-game-server-hosting-platform',
+    title: 'GamingSonico — Self-Service Game Server Hosting Platform',
+    subtitle:
+      'Built a self-service hosting platform with automated provisioning and remote management for multiplayer game servers.',
+    metaDescription:
+      'Case study describing the design and implementation of a self-service game server hosting platform with automated provisioning, remote management, and subscription-based services.',
+    timeframe: '2011 – 2013',
+    role: 'Product designer, backend & frontend engineer, infrastructure owner',
+    tags: ['SaaS', 'Full-stack', 'Platform', 'Hosting'],
+    stack: [
+      'PHP',
+      'MySQL',
+      'HTML',
+      'CSS',
+      'jQuery',
+      'Linux',
+      'SSH',
+    ],
     highlights: [
-      'Automated provisioning and teardown with configurable templates',
-      'Control panel and API for start/stop/scale and logs',
-      'Usage metering and billing pipeline integration',
+      'End-to-end product and infrastructure ownership',
+      'Automated server provisioning and lifecycle management',
+      'Self-service control panel designed for non-technical users',
+      'Remote command execution via SSH from the web panel',
+      'Subscription-based service management',
+      'Addon marketplace with one-click installs',
+      'Multi-department ticketing system',
     ],
     sections: [
       {
@@ -245,7 +245,31 @@ export const caseStudies: CaseStudy[] = [
         nodes: [
           {
             type: 'p',
-            text: 'We offered dedicated and cloud game server hosting. Customers needed to spin up environments quickly, scale for launches, and manage costs without deep DevOps expertise.',
+            text: 'Built and launched at age 14 as a fully self-taught developer, before the widespread availability of modern frameworks, cloud platforms, or learning resources.',
+          },
+          {
+            type: 'p',
+            text: 'I previously operated a large Spanish-speaking gaming community forum, which allowed me to bootstrap distribution and validate demand for a specialized game hosting service.',
+          },
+          {
+            type: 'p',
+            text: 'The opportunity was to offer affordable, SA:MP-focused hosting with a purpose-built control panel.',
+          },
+        ],
+      },
+      {
+        heading: 'Role & Responsibilities',
+        nodes: [
+          { type: 'p', text: 'I owned the project end-to-end:' },
+          {
+            type: 'ul',
+            items: [
+              'Product design and UX',
+              'Backend and frontend development',
+              'Infrastructure setup and operations',
+              'Automation and provisioning scripts',
+              'Customer support and operations',
+            ],
           },
         ],
       },
@@ -253,17 +277,35 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Constraints',
         nodes: [
           {
-            type: 'p',
-            text: 'Hardware and region diversity; need to support both long-lived dedicated servers and short-lived cloud fleets. Billing had to align with actual usage and existing contracts.',
+            type: 'ul',
+            items: [
+              'Built as a solo developer at age 14',
+              'Self-taught, without formal training or mentors',
+              'Limited ecosystem and tooling compared to modern standards',
+              'Had to design and operate both software and infrastructure',
+              'High reliability requirements despite operating on a limited budget',
+            ],
           },
         ],
-      },
+      },      
       {
         heading: 'Solution',
         nodes: [
           {
             type: 'p',
-            text: 'A backend platform that abstracted provisioning (Terraform + K8s operators), exposed a unified API and control panel for lifecycle actions, and fed a metering pipeline for billing. All state and audit logs were stored in our own services.',
+            text: 'Built a web-based hosting platform providing:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'Automated service activation and suspension',
+              'Live RCON console',
+              'Server configuration editor',
+              'Web-based file manager',
+              'Server version updater',
+              'Addon and gamemode marketplace',
+              'Multi-department ticketing system',
+            ],
           },
         ],
       },
@@ -271,8 +313,13 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Key Decisions',
         nodes: [
           {
-            type: 'p',
-            text: 'Separated “control plane” (API, auth, state) from “data plane” (actual game servers) so we could evolve and scale them independently. Chose idempotent operations and clear state machine for server status.',
+            type: 'ul',
+            items: [
+              'Use PHP + MySQL for rapid iteration',
+              'Execute server operations remotely via SSH',
+              'Single application with different user types (customers, operators, admin)',
+              'Automate as many operational workflows as possible',
+            ],
           },
         ],
       },
@@ -280,22 +327,31 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Impact',
         nodes: [
           {
-            type: 'p',
-            text: 'Faster onboarding of new studios, fewer support tickets for “how do I scale,” and a repeatable pattern for adding new regions and game engines.',
+            type: 'ul',
+            items: [
+              'Reached ~40 concurrent clients at peak with recurring subscription revenue',
+              'Reduced manual server administration through automated provisioning and tooling',
+              'Enabled non-technical users to independently manage production game servers',
+              'Validated feasibility of a fully automated hosting platform at small-to-medium scale',
+            ],
           },
         ],
-      },
+      },      
       {
         heading: 'Learnings',
         nodes: [
           {
-            type: 'p',
-            text: 'Game studios care about latency and predictability. Building a clear mental model (server states, regions, billing units) into the API and UI reduced confusion and support load.',
+            type: 'ul',
+            items: [
+              'Automation multiplies operational capacity',
+              'Self-service tooling dramatically reduces support load',
+              'Owning infrastructure shapes how you design software',
+            ],
           },
         ],
       },
     ],
-  },
+  },  
   {
     slug: 'quality-at-scale',
     title: 'Quality at Scale',
@@ -303,12 +359,6 @@ export const caseStudies: CaseStudy[] = [
     timeframe: '2020 – 2021',
     role: 'Senior Backend Engineer',
     tags: ['CI/CD', 'Quality', 'Automation'],
-    problem:
-      'A large product org struggled with release confidence: flaky tests, long feedback loops, and unclear ownership of quality. Deployments were stressful and sometimes rolled back.',
-    solution:
-      'Introduced a shared quality platform with standardized CI pipelines, test categorization, and release gates. Backend services exposed health and contract APIs used by automation.',
-    impact:
-      'Fewer production incidents, faster and more predictable releases, and clearer ownership of quality across frontend and backend.',
     stack: ['TypeScript', 'GitHub Actions', 'Docker', 'Prometheus', 'OpenAPI'],
     highlights: [
       'Unified CI templates with required gates (lint, test, contract)',
