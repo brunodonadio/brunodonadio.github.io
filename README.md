@@ -5,7 +5,7 @@ A minimal, static personal landing and portfolio site for a Senior Backend Engin
 ## Overview
 
 - **Stack:** Astro (static), Tailwind CSS, TypeScript
-- **Pages:** Home, Case Studies (list + detail), CV, 404
+- **Pages:** Home, Case Studies (list + detail), Resume, 404
 - **Features:** Light/dark mode (persisted in `localStorage`), responsive layout, semantic HTML, no CMS
 
 ## Local development
@@ -34,5 +34,3 @@ Output is in `dist/`.
 5. **Base path:** For a user/org site (`username.github.io`), keep `base: '/'` in `astro.config.mjs`. For a project site (`username.github.io/repo-name`), set `site` and `base` in `astro.config.mjs`:
    - `site: 'https://brunodonadio.github.io'`
    - `base: '/repo-name'`
-
-Replace `public/assets/Bruno-Donadio-Resume.pdf` with your actual CV PDF.

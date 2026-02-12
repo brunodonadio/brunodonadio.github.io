@@ -11,7 +11,7 @@ GOAL
 Create a clean, minimal, premium-feel personal website focused on:
 - Who I am
 - What kind of problems I solve
-- My CV
+- My Resume
 - 2–3 high-quality case studies
 
 No CMS.
@@ -34,13 +34,13 @@ SITE PAGES / ROUTES
 - /
 - /case-studies
 - /case-studies/[slug]
-- /cv
+- /resume
 - /404 (simple)
 
 GLOBAL LAYOUT
 - Sticky top navigation with subtle blur on scroll
 - Name on left: Bruno Donadío
-- Links on right: CV, Case Studies, LinkedIn
+- Links on right: Resume, Case Studies, LinkedIn
 - Max-width centered container
 - Footer with name, year, and links
 
@@ -49,7 +49,7 @@ HOME PAGE SECTIONS
    - Large headline: "Senior Backend Engineer"
    - Short subheading describing platform-minded backend work
    - Two CTA buttons:
-     - Download CV (PDF)
+     - Download Resume (PDF)
      - View Case Studies
 
 2) About
@@ -75,7 +75,7 @@ HOME PAGE SECTIONS
 5) Contact
    - Short call to action
    - Email link: bruno.donadio@icloud.com
-   - LinkedIn link (use the profile URL provided in the CV)
+   - LinkedIn link (use the profile URL provided in the Resume)
 
 CASE STUDIES DATA MODEL
 Create a local TypeScript data file:
@@ -124,10 +124,10 @@ CASE STUDY DETAIL PAGE
   - Learnings
 - Back link to case studies list
 
-CV PAGE
+RESUME PAGE
 - Minimal page
 - Button:
-  "Download CV (PDF)"
+  "Download Resume (PDF)"
   linking to /assets/Bruno-Donadio-Resume.pdf
 - Text link to LinkedIn
 - Short note:
