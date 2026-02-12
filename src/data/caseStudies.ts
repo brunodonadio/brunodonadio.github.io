@@ -353,17 +353,34 @@ export const caseStudies: CaseStudy[] = [
     ],
   },  
   {
-    slug: 'quality-at-scale',
-    title: 'Quality at Scale',
-    subtitle: 'Improved release confidence across large product teams.',
-    timeframe: '2020 – 2021',
-    role: 'Senior Backend Engineer',
-    tags: ['CI/CD', 'Quality', 'Automation'],
-    stack: ['TypeScript', 'GitHub Actions', 'Docker', 'Prometheus', 'OpenAPI'],
+    slug: 'quality-at-scale-release-confidence-platform',
+    title: 'Quality at Scale — Release Confidence as a Platform Capability',
+    subtitle:
+      'Built repeatable quality and release systems across multi-squad products using automation, typed contracts, and operational workflows.',
+    metaDescription:
+      'Case study describing how quality was treated as a platform capability to enable reliable releases across complex, multi-team products.',
+    timeframe: '2019 – 2023',
+    role: 'Senior QA Engineer / SDET (platform-minded)',
+    tags: ['Platform', 'Quality Engineering', 'Automation', 'Internal Systems'],
+    stack: [
+      'TypeScript',
+      'Cypress',
+      'Cypress Cloud',
+      'CI Pipelines',
+      'Shared Typed Schemas',
+      'REST APIs',
+      'Slack Integrations',
+    ],
     highlights: [
-      'Unified CI templates with required gates (lint, test, contract)',
-      'Contract and health endpoints for every service',
-      'Release dashboard and automated rollback triggers',
+      'Owned release readiness across QA → Staging → Production using clear gates and structured test plans',
+      'Scaled E2E automation as a production-safety mechanism, not just regression coverage',
+      'Integrated Cypress Cloud and Slack to create fast feedback loops on test health',
+      'Leveraged shared typed contracts across repos to prevent schema drift',
+      'Implemented visual regression workflows with design approval',
+      'Modeled end-to-end scenarios around real operational workflows',
+      'Practiced shift-left quality through parallel scenario and contract definition',
+      'Built automation suites with architecture-level discipline',
+      'Treated quality as a platform capability rather than a checklist',
     ],
     sections: [
       {
@@ -371,7 +388,32 @@ export const caseStudies: CaseStudy[] = [
         nodes: [
           {
             type: 'p',
-            text: 'Multiple product teams shipped features on a common platform. Coordination was ad-hoc; some teams had strong tests and others had almost none. Release process was manual and error-prone.',
+            text: 'Worked across multiple product organizations building financial and operational platforms with real production impact.',
+          },
+          {
+            type: 'p',
+            text: 'Products were developed by multiple squads and released frequently, making release confidence a first-class concern.',
+          },
+          {
+            type: 'p',
+            text: 'The challenge was not only validating features, but building systems that allow teams to ship safely and predictably.',
+          },
+        ],
+      },
+      {
+        heading: 'Role & Responsibilities',
+        nodes: [
+          { type: 'p', text: 'I owned quality as a cross-cutting capability:' },
+          {
+            type: 'ul',
+            items: [
+              'Define release test plans and readiness criteria',
+              'Design and maintain E2E automation suites',
+              'Partner with developers on API and UI contracts',
+              'Document actors, states, and workflows',
+              'Facilitate cross-functional bug hunts',
+              'Mentor and onboard QA engineers',
+            ],
           },
         ],
       },
@@ -379,8 +421,13 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Constraints',
         nodes: [
           {
-            type: 'p',
-            text: 'Could not force a single language or framework. Had to work with existing GitHub and deployment tooling. Needed buy-in from team leads without adding too much process.',
+            type: 'ul',
+            items: [
+              'Multiple teams and repositories',
+              'Mixed stacks and legacy areas',
+              'High release frequency',
+              'Production incidents costly and highly visible',
+            ],
           },
         ],
       },
@@ -389,7 +436,18 @@ export const caseStudies: CaseStudy[] = [
         nodes: [
           {
             type: 'p',
-            text: 'We built a “quality platform” that provided standard CI jobs (lint, unit, integration, contract tests), required health and OpenAPI endpoints for every backend service, and a small set of release gates. Dashboards showed pipeline and deployment status per team.',
+            text: 'Built a quality platform composed of automation, contracts, and release mechanics:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'E2E automation with Cypress',
+              'Daily suite monitoring via Cypress Cloud',
+              'Slack notifications for failures and trends',
+              'Shared typed schemas as cross-repo contracts',
+              'Visual regression testing with design approval',
+              'Structured incident reporting templates',
+            ],
           },
         ],
       },
@@ -397,8 +455,13 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Key Decisions',
         nodes: [
           {
-            type: 'p',
-            text: 'Treat quality as a platform capability, not a checklist. Automate the boring parts (running tests, publishing contracts) and make results visible. Keep gates minimal but non-negotiable.',
+            type: 'ul',
+            items: [
+              'Treat automation as infrastructure, not test scripts',
+              'Shift-left by defining scenarios in parallel with feature design',
+              'Prefer contracts and schemas over mocks',
+              'Put friction at release time, not during development',
+            ],
           },
         ],
       },
@@ -406,8 +469,13 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Impact',
         nodes: [
           {
-            type: 'p',
-            text: 'Release frequency increased while incident rate dropped. Teams could see exactly what was blocking a release. New services were onboarded with the same standards from day one.',
+            type: 'ul',
+            items: [
+              'Reduced release risk through structured gates and automated coverage',
+              'Improved alignment between product, design, QA, and engineering',
+              'Faster triage via consistent incident reports',
+              'Increased confidence in UI and API changes',
+            ],
           },
         ],
       },
@@ -415,13 +483,18 @@ export const caseStudies: CaseStudy[] = [
         heading: 'Learnings',
         nodes: [
           {
-            type: 'p',
-            text: 'Standardization works when it reduces cognitive load and removes ambiguity. Investing in contract tests and health checks paid off for both humans and automation.',
+            type: 'ul',
+            items: [
+              'Quality is a system, not a phase',
+              'Contracts are more powerful than mocks',
+              'Automation is leverage, not just coverage',
+              'Release confidence is a platform problem',
+            ],
           },
         ],
       },
     ],
-  },
+  },  
 ];
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
