@@ -13,6 +13,7 @@ const linkedInUrl = 'https://linkedin.com/in/bruno-donadio';
         href="/assets/Bruno-Donadio-Resume.pdf"
         download
         class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-950"
+        onclick="trackGaEvent('resume_download','resume_pdf')"
       >
         <svg class="size-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18M12 4v11m0 0l-4-4m4 4l4-4" /></svg>
         Download Resume (PDF)
@@ -22,6 +23,7 @@ const linkedInUrl = 'https://linkedin.com/in/bruno-donadio';
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-700 transition hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:ring-neutral-600 dark:focus:ring-offset-neutral-950"
+        onclick="trackGaEvent('linkedin_click','linkedin_profile')"
       >
         LinkedIn
       </a>
