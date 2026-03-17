@@ -19,4 +19,5 @@ node_modules/
 Thumbs.db
 
 # Astro
+.astro/
 astro.config.d.ts
