@@ -11,6 +11,7 @@ const { title, description = 'Senior Backend Engineer — platform-minded system
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://brunodonadio.github.io');
 const linkedInUrl = 'https://linkedin.com/in/bruno-donadio';
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 <!doctype html>
 <html lang="en">
@@ -28,22 +29,31 @@ const linkedInUrl = 'https://linkedin.com/in/bruno-donadio';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CQSKVBM6G"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1CQSKVBM6G');
-    </script>
-    <script>
-      window.trackGaEvent = function (name, label) {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', name, { event_category: 'engagement', event_label: label });
-        }
-      };
-    </script>
+    {import.meta.env.PROD && GA_MEASUREMENT_ID && (
+      <>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
+        </script>
+        <script>
+          window.trackGaEvent = function (name, label) {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', name, {
+                event_category: 'engagement',
+                event_label: label
+              });
+            }
+          };
+        </script>
+      </>
+    )}
   </head>
   <body class="min-h-screen font-sans">
     <header
