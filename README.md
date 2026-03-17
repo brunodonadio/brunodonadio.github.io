@@ -34,3 +34,9 @@ Output is in `dist/`.
 5. **Base path:** For a user/org site (`username.github.io`), keep `base: '/'` in `astro.config.mjs`. For a project site (`username.github.io/repo-name`), set `site` and `base` in `astro.config.mjs`:
    - `site: 'https://brunodonadio.github.io'`
    - `base: '/repo-name'`
+
+## Google Analytics
+
+- **Local env:** Optionally set `PUBLIC_GA_MEASUREMENT_ID` in a local `.env` file (see `.env.example`).  
+- **Production-only:** Analytics only runs when `import.meta.env.PROD` is `true` and `PUBLIC_GA_MEASUREMENT_ID` is defined, so dev builds do not load GA.  
+- **GitHub Pages:** Configure a repository Actions variable named `PUBLIC_GA_MEASUREMENT_ID` so the deploy workflow can pass it into the Astro build.
