@@ -22,6 +22,162 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'orbit-agent-based-development-pipeline',
+    title: 'Orbit — Agent-Based Development Pipeline',
+    subtitle:
+      'A proof-of-concept exploring autonomous agent orchestration for software development workflows.',
+    metaDescription:
+      'Case study describing the design and implementation of Orbit, an agent-based development pipeline built on OpenClaw.',
+    timeframe: '2026',
+    role: 'System designer, backend engineer, infrastructure owner',
+    tags: ['Developer Tooling', 'Platform', 'AI'],
+    stack: [
+      'OpenClaw',
+      'TypeScript',
+      'React',
+      'Vite',
+      'Node.js',
+      'Fastify',
+      'SSE',
+      'Caddy',
+      'systemd',
+    ],
+    highlights: [
+      'Multi-agent pipeline with specialized stages (discovery, architecture, implementation, review, documentation, testing)',
+      'Orchestrator agent coordinating stage execution and failure routing',
+      'Real-time dashboard with SSE for monitoring pipeline state',
+      'Build and lint validation gates before stage completion',
+      'End-to-end testing agent for quality assurance',
+      'HTTPS deployment with Caddy and systemd services',
+      'Iterative design with lessons documented and applied',
+    ],
+    sections: [
+      {
+        heading: 'Context',
+        nodes: [
+          {
+            type: 'p',
+            text: 'After working extensively with Cursor as an AI-assisted development tool, I became interested in exploring autonomous agent systems for software development workflows.',
+          },
+          {
+            type: 'p',
+            text: 'OpenClaw provided a framework for building agent-based systems, and I wanted to test whether a structured pipeline of specialized agents could handle discrete development tasks.',
+          },
+          {
+            type: 'p',
+            text: 'The goal was not to replace human oversight, but to explore how far agent orchestration could go in automating well-defined stages of development work.',
+          },
+        ],
+      },
+      {
+        heading: 'Role & Responsibilities',
+        nodes: [
+          { type: 'p', text: 'I owned the project end-to-end:' },
+          {
+            type: 'ul',
+            items: [
+              'System design and agent architecture',
+              'Implementation of all agents and orchestration logic',
+              'Real-time dashboard for monitoring',
+              'Infrastructure setup and deployment',
+              'Documentation and iteration based on learnings',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Constraints',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Proof-of-concept scope — not production software',
+              'Self-funded with free-tier model access',
+              'Learning in public with evolving requirements',
+              'No dedicated QA — validation through testing agent',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Solution',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Built a multi-agent pipeline with specialized stages:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'Helios (Orchestrator) — coordinates pipeline execution and failure routing',
+              'Comet (Discovery) — analyzes requirements and constraints',
+              'Polaris (Architecture) — designs system structure and contracts',
+              'Mars (Implementation) — writes code with build/lint validation',
+              'Saturn (Review) — quality review without modification',
+              'Lyra (Documentation) — creates README and guides',
+              'Vega (Testing) — end-to-end validation before completion',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Each stage produces structured artifacts (reports, handoffs) consumed by downstream agents. The orchestrator manages state persistence and routes failures to responsible agents.',
+          },
+          {
+            type: 'p',
+            text: 'A real-time dashboard provides visibility into pipeline progress, agent states, and run history.',
+          },
+        ],
+      },
+      {
+        heading: 'Key Decisions',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Separate agent workspaces with explicit contracts',
+              'Build and lint validation required before implementation stage completes',
+              'Testing agent validates end-to-end before pipeline closure',
+              'State files stored as JSON for observability and debugging',
+              'SSE for real-time updates without WebSocket complexity',
+              'HTTPS with Caddy for secure dashboard access',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Impact',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Demonstrated feasibility of structured agent pipelines for development tasks',
+              'Identified key validation gates (build, lint, tests) essential for quality',
+              'Learned that Mars needed build validation to prevent downstream failures',
+              'Built working dashboard for monitoring multi-stage pipelines',
+              'Documented lessons for future iteration',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Learnings',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Agent boundaries must be explicit — scope creep is a real problem',
+              'Build/lint validation gates are essential, not optional',
+              'Testing agents should report, not fix — routing to responsible agent is cleaner',
+              'State persistence enables debugging and observability',
+              'Iterating on agent prompts is an ongoing process',
+              'Agent pipelines work best for well-defined, bounded tasks',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'don-lucas-internal-operations-platform',
     title: 'Internal Operations Platform — Don Lucas SRL',
     subtitle:
