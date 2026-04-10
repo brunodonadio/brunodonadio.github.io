@@ -1,0 +1,1 @@
+import{N as t}from"./DEXaqUkF.js";import{d as i}from"./B6MWpw8c.js";const e=t("location",{state:()=>({provinceList:[],localityList:[]}),actions:{async fetchProvinceList(){this.provinceList=[]},async fetchLocalityList(o={}){this.localityList=i()}}});export{e as u};

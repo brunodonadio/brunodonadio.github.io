@@ -1,0 +1,1 @@
+var E=(C=>(C.Order="ORDER",C.Collection="COLLECTION",C.Withholding="WITHHOLDING",C.CreditNote="CREDIT_NOTE",C.DebitNote="DEBIT_NOTE",C))(E||{}),N=(C=>(C.Pending="PENDING",C.Settled="SETTLED",C.Canceled="CANCELED",C))(N||{}),e=(C=>(C.Cash="CASH",C.BankTransfer="BANK_TRANSFER",C.Check="CHECK",C))(e||{});export{e as P,N as T,E as a};

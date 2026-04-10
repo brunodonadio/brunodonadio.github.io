@@ -1,0 +1,1 @@
+function s(r){const{orderBy:e,orderDir:o,...t}=r;return{...t,page:1}}function i(r,e,o){return{...r,page:1,orderBy:e,orderDir:o}}function a(r,e){const{orderBy:o,orderDir:t,...c}=r;return o!==e?{...r,page:1,orderBy:e,orderDir:"desc"}:(t??"desc")==="desc"?{...r,page:1,orderBy:e,orderDir:"asc"}:{...c,page:1}}export{a,s as c,i as w};
