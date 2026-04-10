@@ -1,0 +1,1 @@
+import{m as n}from"./DEXaqUkF.js";const m=o=>{const{locale:t}=n(),e=new Date(o),a=e.toLocaleDateString(t.value,{day:"2-digit",month:"2-digit",year:"numeric"}),i=e.toLocaleTimeString(t.value,{hour:"2-digit",minute:"2-digit",hour12:!1});return`${a} ${i}`};export{m as u};

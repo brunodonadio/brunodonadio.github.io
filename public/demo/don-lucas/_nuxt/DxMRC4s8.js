@@ -1,0 +1,1 @@
+import{p as a}from"./DAF9X52R.js";import{m as o}from"./DEXaqUkF.js";const m=t=>{const{locale:e}=o();return`${a(t).toLocaleDateString(e.value,{day:"2-digit",month:"2-digit",year:"numeric"})}`};export{m as u};

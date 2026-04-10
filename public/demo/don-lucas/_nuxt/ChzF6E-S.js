@@ -1,0 +1,1 @@
+import{m as t}from"./DEXaqUkF.js";function o(e,r){const n=new Intl.NumberFormat(r,{style:"currency",currency:"ARS",minimumFractionDigits:2}).format(e.abs().toNumber()).replace(/\u00A0/," ");return e.isNegative()?`(${n})`:n}const s=e=>{const{locale:r}=t();return o(e,r.value)};export{o as f,s as u};

@@ -1,0 +1,1 @@
+import{d as n,w as a,n as o,c as s,o as _}from"./DEXaqUkF.js";const p=n({__name:"index",async setup(c){let e,t;return[e,t]=a(()=>o({name:"login"})),await e,t(),(r,i)=>(_(),s("div"))}});export{p as default};

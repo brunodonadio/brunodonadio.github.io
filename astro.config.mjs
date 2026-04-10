@@ -6,4 +6,9 @@ export default defineConfig({
   site: 'https://brunodonadio.github.io',
   base: '/',
   output: 'static',
+  vite: {
+    preview: {
+      allowedHosts: ['vps-5778375-x.dattaweb.com'],
+    },
+  },
 });

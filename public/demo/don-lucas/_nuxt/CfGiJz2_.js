@@ -1,0 +1,1 @@
+import{u as a,T as t}from"./Bm61BZqw.js";const p=async(r,o,s)=>{const e=s??o("common.copy.linkCopied");try{await navigator.clipboard.writeText(r),a({message:e})}catch{a({message:o("common.copy.copyError"),type:t.Error})}};export{p as u};

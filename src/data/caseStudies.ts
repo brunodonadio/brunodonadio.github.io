@@ -18,6 +18,7 @@ export interface CaseStudy {
   stack: string[];
   highlights: string[];
   sections: CaseStudySection[];
+  demoUrl?: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -57,6 +58,7 @@ export const caseStudies: CaseStudy[] = [
       'Multi-environment setup (test, UAT, production) with automated deployments',
       'Scalable foundation for future automation and integrations',
     ],
+    demoUrl: '/demo/don-lucas/',
     sections: [
       {
         heading: 'Context',
@@ -380,6 +382,7 @@ export const caseStudies: CaseStudy[] = [
       'HTTPS deployment with Caddy reverse proxy',
       'Iterative design with lessons documented and applied',
     ],
+    demoUrl: '/demo/orbit/',
     sections: [
       {
         heading: 'Context',
