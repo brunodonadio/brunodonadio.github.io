@@ -7,10 +7,12 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Senior Backend Engineer — platform-minded systems, reliability, and delivery.' } = Astro.props;
+const { title, description = 'Senior Software Engineer — backend systems, internal platforms, and quality architecture.' } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://brunodonadio.github.io');
 const linkedInUrl = 'https://linkedin.com/in/bruno-donadio';
+const email = 'bruno.donadio@icloud.com';
+const emailUrl = `mailto:${email}`;
 const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 <!doctype html>
@@ -65,10 +67,11 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         </a>
         <div class="flex items-center gap-1 sm:gap-4">
           <a
-            href="/resume"
+            href={emailUrl}
             class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:focus-visible:ring-neutral-500 dark:focus-visible:ring-offset-neutral-950"
+            onclick="trackGaEvent('email_click','email_contact')"
           >
-            Resume
+            Get in Touch
           </a>
           <a
             href="/case-studies"
@@ -99,7 +102,6 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         <span class="text-sm text-neutral-500 dark:text-neutral-400">Bruno Donadío © {new Date().getFullYear()}</span>
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           <a href="mailto:bruno.donadio@icloud.com" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200" onclick="trackGaEvent('email_click','email_contact')">bruno.donadio@icloud.com</a>
-          <a href="/resume" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">Resume</a>
           <a href="/case-studies" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">Case Studies</a>
           <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-500 transition hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200" onclick="trackGaEvent('linkedin_click','linkedin_profile')">LinkedIn</a>
         </div>
