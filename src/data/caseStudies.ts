@@ -22,6 +22,149 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'quality-at-scale-release-confidence-platform',
+    title: 'Quality at Scale — Release Confidence as a Platform Capability',
+    subtitle:
+      'Built repeatable quality and release systems across multi-squad products using automation, typed contracts, and operational workflows.',
+    metaDescription:
+      'Case study describing how quality was treated as a platform capability to enable reliable releases across complex, multi-team products.',
+    timeframe: '2019 – 2023',
+    role: 'Senior QA Engineer / SDET (platform-minded)',
+    tags: ['Platform', 'Quality Engineering', 'Automation', 'Internal Systems'],
+    stack: [
+      'TypeScript',
+      'Cypress',
+      'Cypress Cloud',
+      'CI Pipelines',
+      'Shared Typed Schemas',
+      'REST APIs',
+      'Slack Integrations',
+    ],
+    highlights: [
+      'Owned release readiness across QA → Staging → Production using clear gates and structured test plans',
+      'Scaled E2E automation as a production-safety mechanism, not just regression coverage',
+      'Integrated Cypress Cloud and Slack to create fast feedback loops on test health',
+      'Leveraged shared typed contracts across repos to prevent schema drift',
+      'Implemented visual regression workflows with design approval',
+      'Modeled end-to-end scenarios around real operational workflows',
+      'Practiced shift-left quality through parallel scenario and contract definition',
+      'Built automation suites with architecture-level discipline',
+      'Treated quality as a platform capability rather than a checklist',
+    ],
+    sections: [
+      {
+        heading: 'Context',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Worked across multiple product organizations building financial and operational platforms with real production impact.',
+          },
+          {
+            type: 'p',
+            text: 'Products were developed by multiple squads and released frequently, making release confidence a first-class concern.',
+          },
+          {
+            type: 'p',
+            text: 'The challenge was not only validating features, but building systems that allow teams to ship safely and predictably.',
+          },
+        ],
+      },
+      {
+        heading: 'Role & Responsibilities',
+        nodes: [
+          { type: 'p', text: 'I owned quality as a cross-cutting capability:' },
+          {
+            type: 'ul',
+            items: [
+              'Define release test plans and readiness criteria',
+              'Design and maintain E2E automation suites',
+              'Partner with developers on API and UI contracts',
+              'Document actors, states, and workflows',
+              'Facilitate cross-functional bug hunts',
+              'Mentor and onboard QA engineers',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Constraints',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Multiple teams and repositories',
+              'Mixed stacks and legacy areas',
+              'High release frequency',
+              'Production incidents costly and highly visible',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Solution',
+        nodes: [
+          {
+            type: 'p',
+            text: 'Built a quality platform composed of automation, contracts, and release mechanics:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'E2E automation with Cypress',
+              'Daily suite monitoring via Cypress Cloud',
+              'Slack notifications for failures and trends',
+              'Shared typed schemas as cross-repo contracts',
+              'Visual regression testing with design approval',
+              'Structured incident reporting templates',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Key Decisions',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Treat automation as infrastructure, not test scripts',
+              'Shift-left by defining scenarios in parallel with feature design',
+              'Prefer contracts and schemas over mocks',
+              'Put friction at release time, not during development',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Impact',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Reduced release risk through structured gates and automated coverage',
+              'Improved alignment between product, design, QA, and engineering',
+              'Faster triage via consistent incident reports',
+              'Increased confidence in UI and API changes',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Learnings',
+        nodes: [
+          {
+            type: 'ul',
+            items: [
+              'Quality is a system, not a phase',
+              'Contracts are more powerful than mocks',
+              'Automation is leverage, not just coverage',
+              'Release confidence is a platform problem',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'don-lucas-internal-operations-platform',
     title: 'Internal Operations Platform — Don Lucas SRL',
     subtitle:
@@ -205,149 +348,6 @@ export const caseStudies: CaseStudy[] = [
               'Clear domain boundaries simplify long-term evolution',
               'Internal platforms benefit from treating APIs as products',
               'Incremental adoption strategies are critical in non-technical organizations',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: 'quality-at-scale-release-confidence-platform',
-    title: 'Quality at Scale — Release Confidence as a Platform Capability',
-    subtitle:
-      'Built repeatable quality and release systems across multi-squad products using automation, typed contracts, and operational workflows.',
-    metaDescription:
-      'Case study describing how quality was treated as a platform capability to enable reliable releases across complex, multi-team products.',
-    timeframe: '2019 – 2023',
-    role: 'Senior QA Engineer / SDET (platform-minded)',
-    tags: ['Platform', 'Quality Engineering', 'Automation', 'Internal Systems'],
-    stack: [
-      'TypeScript',
-      'Cypress',
-      'Cypress Cloud',
-      'CI Pipelines',
-      'Shared Typed Schemas',
-      'REST APIs',
-      'Slack Integrations',
-    ],
-    highlights: [
-      'Owned release readiness across QA → Staging → Production using clear gates and structured test plans',
-      'Scaled E2E automation as a production-safety mechanism, not just regression coverage',
-      'Integrated Cypress Cloud and Slack to create fast feedback loops on test health',
-      'Leveraged shared typed contracts across repos to prevent schema drift',
-      'Implemented visual regression workflows with design approval',
-      'Modeled end-to-end scenarios around real operational workflows',
-      'Practiced shift-left quality through parallel scenario and contract definition',
-      'Built automation suites with architecture-level discipline',
-      'Treated quality as a platform capability rather than a checklist',
-    ],
-    sections: [
-      {
-        heading: 'Context',
-        nodes: [
-          {
-            type: 'p',
-            text: 'Worked across multiple product organizations building financial and operational platforms with real production impact.',
-          },
-          {
-            type: 'p',
-            text: 'Products were developed by multiple squads and released frequently, making release confidence a first-class concern.',
-          },
-          {
-            type: 'p',
-            text: 'The challenge was not only validating features, but building systems that allow teams to ship safely and predictably.',
-          },
-        ],
-      },
-      {
-        heading: 'Role & Responsibilities',
-        nodes: [
-          { type: 'p', text: 'I owned quality as a cross-cutting capability:' },
-          {
-            type: 'ul',
-            items: [
-              'Define release test plans and readiness criteria',
-              'Design and maintain E2E automation suites',
-              'Partner with developers on API and UI contracts',
-              'Document actors, states, and workflows',
-              'Facilitate cross-functional bug hunts',
-              'Mentor and onboard QA engineers',
-            ],
-          },
-        ],
-      },
-      {
-        heading: 'Constraints',
-        nodes: [
-          {
-            type: 'ul',
-            items: [
-              'Multiple teams and repositories',
-              'Mixed stacks and legacy areas',
-              'High release frequency',
-              'Production incidents costly and highly visible',
-            ],
-          },
-        ],
-      },
-      {
-        heading: 'Solution',
-        nodes: [
-          {
-            type: 'p',
-            text: 'Built a quality platform composed of automation, contracts, and release mechanics:',
-          },
-          {
-            type: 'ul',
-            items: [
-              'E2E automation with Cypress',
-              'Daily suite monitoring via Cypress Cloud',
-              'Slack notifications for failures and trends',
-              'Shared typed schemas as cross-repo contracts',
-              'Visual regression testing with design approval',
-              'Structured incident reporting templates',
-            ],
-          },
-        ],
-      },
-      {
-        heading: 'Key Decisions',
-        nodes: [
-          {
-            type: 'ul',
-            items: [
-              'Treat automation as infrastructure, not test scripts',
-              'Shift-left by defining scenarios in parallel with feature design',
-              'Prefer contracts and schemas over mocks',
-              'Put friction at release time, not during development',
-            ],
-          },
-        ],
-      },
-      {
-        heading: 'Impact',
-        nodes: [
-          {
-            type: 'ul',
-            items: [
-              'Reduced release risk through structured gates and automated coverage',
-              'Improved alignment between product, design, QA, and engineering',
-              'Faster triage via consistent incident reports',
-              'Increased confidence in UI and API changes',
-            ],
-          },
-        ],
-      },
-      {
-        heading: 'Learnings',
-        nodes: [
-          {
-            type: 'ul',
-            items: [
-              'Quality is a system, not a phase',
-              'Contracts are more powerful than mocks',
-              'Automation is leverage, not just coverage',
-              'Release confidence is a platform problem',
             ],
           },
         ],

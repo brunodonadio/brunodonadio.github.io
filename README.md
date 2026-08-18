@@ -5,7 +5,7 @@ A minimal, static personal landing and portfolio site for a Senior Backend Engin
 ## Overview
 
 - **Stack:** Astro (static), Tailwind CSS, TypeScript
-- **Pages:** Home, Case Studies (list + detail), Resume, 404
+- **Pages:** Home, Case Studies (list + detail), 404
 - **Features:** Light/dark mode (persisted in `localStorage`), responsive layout, semantic HTML, no CMS
 
 ## Local development
